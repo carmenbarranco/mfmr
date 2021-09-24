@@ -3,6 +3,6 @@ vendor
 node_modules
 
 public/.DS_Store
+public/.idea
 .DS_Store
 public/assets
-
