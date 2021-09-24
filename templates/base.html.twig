@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="robots" content="all">
+
+  <title>{{title}}</title>
+  <link rel="canonical" href="{{canonical}}">  
+  <meta name="description" content="{{description}}">
+  
+  <!-- https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+  <link rel="manifest" href="/fav/site.webmanifest">
+  <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- https://realfavicongenerator.net/social -->
+  <meta property="og:image:height" content="402">
+  <meta property="og:image:width" content="767">
+  <meta property="og:title" content="Mi Fugue Mi Raison">
+  <meta property="og:description" content="Th&eacute;atre d'int&eacute;r&ecirc;t g&eacute;n&eacute;ral">
+  <meta property="og:url" content="https://www.mfmr.fr">
+  <meta property="og:image" content="https://www.mfmr.fr/og/767x402.jpg">
+
+{#  fot google search console #}
+  <meta name="google-site-verification" content="XIRO2RBaETXdQJFGlzb9mL1HLimuOugPYpMcBJfdArs" />
+
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main id="app">
+    <div id="scroller-location"></div>
+<!--
+    <div id="toggle-menu" class="burger-icon burger-icon-svg">
+      <svg x="0" y="0" width="54px" height="54px" viewBox="0 0 106 106">
+        <path d="M29.500,52.500 C36.691,52.500 55.785,52.500 75.500,52.500 C100.500,52.500 99.111,28.661 90.359,19.656 C81.274,10.308 68.565,4.500 54.500,4.500 C26.886,4.500 4.500,26.886 4.500,54.500 C4.500,82.114 26.886,104.500 54.500,104.500 C82.114,104.500 104.829,82.112 104.500,54.500 C104.167,26.500 84.167,4.500 55.500,4.500"></path>
+      </svg>
+      <span></span>
+    </div>
+-->
+
+    <div id="page">
+      {% block header %}{% endblock %}
+      <div id="content">{% block content %}{% endblock %}</div>
+      <footer></footer>
+    </div>
+
+    <div id="loader">
+      <div id="loader-bg"></div>
+      <div class="logo">
+        <h1 class="mfmr">
+          <span class="row mi">
+            <span class="anim">Mi</span>
+          </span>
+          <span class="row f">
+            <span class="anim">fugue</span>
+          </span>
+          <span class="row r">
+            <span class="anim">raison</span>
+          </span>
+        </h1>
+
+        <p class="row">
+          <span class="anim">Pour un théâtre d'intérêt général.</span>
+        </p>
+        <p class="row">
+          <span class="anim">Transmissions et créations.</span>
+        </p>
+        <p class="row">
+          <span class="anim">Textes contemporains.</span>
+        </p> 
+        <p class="row">
+          <span class="anim">Résiliences.</span>
+        </p>
+      </div>
+    </div>
+    <div id="loader2">
+      <div id="loader-bg"></div>
+    </div>
+  </main>
+  
+  <div>
+    <div id="issue-ub-w" class="issue-w">
+      <div class="issue">Veuillez mettre à jour votre navigateur pour accéder à ce site web.</div>
+    </div>
+    <noscript>
+      <div class="issue-w">
+        <div class="issue">Veuillez activer Javascript pour accéder à ce site web.</div>
+      </div>
+    </noscript>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

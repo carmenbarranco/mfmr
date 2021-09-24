@@ -1,0 +1,472 @@
+{% extends 'base.' ~ format ~'.twig' %}
+
+{% block header %}
+    <header id="home">
+        <div class="logo">
+            <div class="logo-inner">
+                <h1 class="mfmr">
+        <span class="row mi">
+          <span class="anim">Mi</span>
+        </span>
+                    <span class="row f">
+          <span class="anim">fugue</span>
+        </span>
+                    <span class="row r">
+          <span class="anim">raison</span>
+        </span>
+                </h1>
+                <p class="row">
+                    <span class="anim">Un Théâtre pour l'Egalité et l'Intérêt Général.</span>
+                </p>
+                <p class="row">
+                    <span class="anim">Créations et Transmissions.</span>
+                </p>
+                <p class="row">
+                    <span class="anim">Lutte contre les violences et les discriminations.</span>
+                </p>
+                <p class="row">
+                    <span class="anim">Résiliences.</span>
+                </p>
+            </div>
+        </div>
+
+        <span class="discover">
+   <span>&#x21a7;</span> Découvrir la compagnie
+  </span>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <!--<div>-->
+    <section id="creer">
+        <h2 id="pt">Créer</h2>
+        <h3>Wetoo Festival <br>
+            <span>Festival féministe et familial</span>
+        </h3>
+        <div class="box">
+            <div class="main">
+                <img src="/assets/creer/wetoo/affiche.jpg" alt="Affiche We Too Festival">
+            </div>
+            <div class="second">
+                <div class="infos_wetoo">
+                    {% if dates.wetoo %}
+                        {% for date in dates.wetoo if date.home %}
+                            <p>{% if date.titre %}<span id="titre_dates">{{ date.titre }}</span>{% endif %}
+                                {% if date.lieu %}<br> Où: {{ date.lieu }} {% endif %}
+                                <br>Dates: {% if date.dates %} {{ date.dates }}{% endif %}
+                                {% if date.lien %}
+                                    <br><a class="bold" href="{{ date.lien }}" target="_blank" rel="noopener">En savoir
+                                    plus</a>
+                                {% endif %}
+                            </p>
+                            <hr class="hr_separate">
+                        {% endfor %}
+                    {% else %}
+                    {% endif %}
+                </div>
+                <p class="disc-w">
+                    <a class="discover" href="http://wetoofestival.fr/">
+                        &#x21a6; En savoir plus
+                    </a>
+                </p>
+                <p class="disc-w">
+                    <a href="/assets/creer/wetoo/dossier.pdf" download="Dossier de presse wetoofestival">&#x21a6;
+                        Télécharger le dossier</a><br>
+                </p>
+            </div>
+        </div>
+        <h3>SPECULUM 2 <br>
+            <span>LE DEUXIEME SPECULUM - en chair et en os -</span>
+        </h3>
+        <div class="box">
+            <div class="main">
+                <img src="/assets/creer/speculum2/affiche.png" alt="Affiche SPECULUM 2">
+            </div>
+            <div class="second">
+                <p>Plus d'information très prochainement</p>
+                <div class="infos_speculum2">
+                    {% if dates.speculum2 %}
+                        {% for date in dates.speculum2 if date.home %}
+                            <p>{% if date.titre %}<span id="titre_dates">{{ date.titre }}</span>{% endif %}
+                                {% if date.lieu %}<br> Où: {{ date.lieu }} {% endif %}
+                                <br>Dates: {% if date.dates %} {{ date.dates }}{% endif %}
+                                {% if date.lien %}
+                                    <br><a class="bold" href="{{ date.lien }}" target="_blank" rel="noopener">En savoir
+                                    plus</a>
+                                {% endif %}
+                            </p>
+                            <hr class="hr_separate">
+                        {% endfor %}
+                    {% else %}
+                    {% endif %}
+                </div>
+                <p class="disc-w">
+                    <a href="/assets/creer/speculum2/dossier.pdf" download="Dossier de presse speculum2">&#x21a6;
+                        Vous pouvez désormais télécharger le dossier</a><br>
+                </p>
+            </div>
+        </div>
+
+        {# SPECULUM #}
+        <h3>Speculum<br>
+{#            <span>2021 : L'odyssée du corps des femmes</span>#}
+        </h3>
+        <div class="box">
+            <div class="main">
+                <img src="/assets/creer/speculum/affiche.jpg" alt="Affiche Speculum">
+            </div>
+            <div class="second">
+                <div class="row_speculum_colum">
+                    <div class="column" id="column1_speculum">
+                        <cite><a href="https://avrilenseptembre.fr" target="_blank" rel="noopener">Diffusion Avril en
+                                Septembre</a>
+                        </cite>
+                        <blockquote>
+                            <p><strong>Politique, militant et original...</strong> Une mise en scène diablement efficace
+                                où la
+                                drôlerie et le drame se mêlent habilement. En un mot, le pari est réussi.</p>
+                        </blockquote>
+                    </div>
+                    <div class="column">
+                        <cite>– L'express</cite>
+                        <blockquote>
+                            <p><strong>Bouleversant, mais jamais dénué d'humour</strong></p>
+                        </blockquote>
+                    </div>
+                </div>
+                <cite>– Le parisien</cite>
+                <p>Collaboration artistique avec <a href="http://www.troupeaudanslecrane.fr" target="_blank"
+                                                    rel="noopener">Le
+                        Troupeau dans le Crâne</a></p>
+                <p>Texte paru aux <a
+                            href="https://www.editionlescygnes.fr/catalogues/fiches-th%C3%A9%C3%A2tre/sp%C3%A9culum/"
+                            target="_blank" rel="noopener">Editions les Cygnes</a></p>
+
+                <hr class="hr_separate">
+
+                <p class="prix_recompenses"><span class="bold">Prix et récompenses</span><br>
+                    GRAND PRIX DU JURY à l'unanimité au Festival Les Années jouées 2019</p>
+
+                <hr class="hr_separate">
+
+                {% if dates.speculum %}
+                    <p><span class="bold">Prochaines dates</span></p>
+                    {% for date in dates.speculum if date.home %}
+                        <p class="{% if date.class %} {{ date.class }} {% endif %}">{% if date.titre %}<span
+                                    id="titre_dates">{{ date.titre }}</span>{% endif %}
+                            {% if date.lieu %}<br> Où: {{ date.lieu }} {% endif %}
+                            <br>Dates: {% if date.dates %} {{ date.dates }}{% endif %}
+                            {% if date.lien %}
+                                <!-- I remove target="_blank" rel="noopener-->
+                                <br><a class="bold" class="lien_dates" href="{{ date.lien }}">{% if date.nom_lien %}
+                                    <span
+                                    id="{% if date.id_lien %}{{ date.id_lien }}{% endif %}">{{ date.nom_lien }}</span>{% endif %}
+                            </a>
+                            {% endif %}
+                        </p>
+                    {% endfor %}
+                {% else %}
+                    <p class="bold">Disponible en tournée</p>
+                    <p>
+                        <span class="bold">Contact</span><br>
+                        <a href="mailto:caroline.sahuquet@sfr.fr">Caroline Sahuquet</a><br>
+                        06 14 32 54 96
+                    </p>
+                {% endif %}
+                <p class="disc-w">
+                    <a class="discover" href="/speculum">
+                        &#x21a6; Découvrir la pièce
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <h3>Tout sur le Rouge</h3>
+        <div class="box">
+            <div class="main">
+                <img src="/assets/creer/tsr/affiche.jpg" alt="Affiche Tout sur le Rouge">
+            </div>
+            <div class="second">
+                <p>Après deux livres écrits par Élise Thiébaut, « CECI EST MON SANG, petite histoire des règles, de
+                    celles qui les ont et de ceux qui les font » (Ed. La Découverte) et « Les Règles, quelle aventure !
+                    (Ed. La Ville brûle), Tout sur le Rouge aborde ce tabou qui résiste encore en nous et qui remonte
+                    aux origines de l’humanité : les menstruations.</p>
+                <p>Des ménarches à la ménopause, Tout sur le Rouge explore à travers le cycle féminin, les étapes de la
+                    vie d’une femme.</p>
+                <p>Bienvenue dans la matrice.</p>
+                <p>La pièce se décline aussi en format court ( 45 minutes ) avec possibilité d'échange avec l'équipe +
+                    Quizz + ateliers - Action artistique menés dans les collèges et Lycées
+                </p>
+
+                {% if dates.tsr %}
+                    <p><span class="bold">Prochaines dates</span></p>
+                    {% for date in dates.tsr if date.home %}
+                        <p>{% if date.titre %}<span id="titre_dates">{{ date.titre }}</span>{% endif %}
+                            {% if date.lieu %}<br> Où: {{ date.lieu }} {% endif %}
+                            <br>Dates: {% if date.dates %} {{ date.dates }}{% endif %}
+                            {% if date.lien %}
+                                <br><a class="bold" href="{{ date.lien }}" target="_blank" rel="noopener">Réserver</a>
+                            {% endif %}
+                        </p>
+                        <hr class="hr_separate">
+                    {% endfor %}
+                {% else %}
+                    <p class="bold">Disponible en tournée</p>
+                    <p>
+                        <span class="bold">Contact</span><br>
+                        <a href="mailto:caroline.sahuquet@sfr.fr">Caroline Sahuquet</a><br>
+                        06 14 32 54 96
+                    </p>
+                {% endif %}
+
+                <p class="disc-w">
+                    <a class="discover" href="/tout-sur-le-rouge">
+                        &#x21a6; Découvrir la pièce
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <h3>Matthieu(x)</h3>
+        <div class="box">
+            <div class="main">
+                <img src="/assets/creer/matthieu-x/affiche.png" alt="Affiche Matthieu(x)">
+            </div>
+            <div class="second">
+                <blockquote>
+                    <p><strong>Portée par trois comédiens épatants,</strong> cette comédie humaine atypique qui
+                        s’autorise de très jolies sorties de routes afin d’éviter le piège du convenu, du conventionnel
+                        et du chemin balisé ne manque pas de nous questionner, nous cueillir dans notre intimité la plus
+                        enfouie comme l’écho lointain de nos névroses et de notre vécu. Incontestablement du beau
+                        travail, du beau théâtre.</p>
+                </blockquote>
+                <cite>– Théâtrorama</cite>
+                <p><span class="bold">Prix et récompenses</span><br>
+                    Petit Molière 2016<br>
+                    Texte à paraître aux éditions Les Cygnes en mai 2020
+
+                </p>
+                {% if dates.matthieu-x %}
+                    <p><span class="bold">Prochaines dates</span></p>
+                    {% for date in dates.matthieu-x if date.home %}
+                        <p>{% if date.titre %}<span id="titre_dates">{{ date.titre }}</span>{% endif %}
+                            {% if date.lieu %}<br> Où: {{ date.lieu }} {% endif %}
+                            <br>Dates: {% if date.dates %} {{ date.dates }}{% endif %}
+                            {% if date.lien %}
+                                <br><a class="bold" href="{{ date.lien }}" target="_blank" rel="noopener">Réserver</a>
+                            {% endif %}
+                        </p>
+                        <hr class="hr_separate">
+                    {% endfor %}
+                {% else %}
+                    <p class="bold">Disponible en tournée</p>
+                    <p>
+                        <span class="bold">Contact</span><br>
+                        <a href="mailto:caroline.sahuquet@sfr.fr">Caroline Sahuquet</a><br>
+                        06 14 32 54 96
+                    </p>
+                {% endif %}
+
+                <p class="disc-w">
+                    <a class="discover" href="/matthieu-x">
+                        &#x21a6; Découvrir la pièce
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="transmettre">
+        <h2>Transmettre</h2>
+        <p class="fl mt">La compagnie intègre l’art et le théâtre parmi les remèdes possibles aux problématiques
+            sociales. Nous participons au développement de la créativité et du bien-être du plus grand nombre. Nos
+            stages, nos ateliers et nos journées de formations sont à la fois vecteurs de lien social, lieu d’échange,
+            de résilience et source d’un enseignement de technique de communication verbale, non verbale et
+            para-verbale.</p>
+
+        <p>En 2005, Stéphanie Colonna, Jacques Plaideau et Caroline Sahuquet ont créé une méthode innovante de
+            développement personnel grâce à l’outil théâtral. Ils ont décidé de mettre ce savoir faire au service des
+            publics prioritaires, tout d’abord en créant des stages de restauration de l’estime de soi répondant ainsi
+            un appel d’offre du Fond social Européen. Ces ateliers ont eu lieu dans les espaces insertions de la Mairie
+            de Paris. Cette action s’est pérennisé avec succès et est subventionnée depuis 2006 par la direction des
+            affaires sociales de la Ville de Paris.</p>
+
+        <h3>L'équipe</h3>
+        <h4>Les formatrices <br>
+            <span>spécialisées dans la restauration de l’estime de soi</span></h4>
+        <div class="fbox-c">
+            <div class="item polaroid">
+                <img src="/assets/compagnie/300x300/stephanie-colonna.jpg" alt="Stéphanie Colonna">
+                <div class="content">
+                    <p><span class="bold">Stéphanie Colonna</span><br>
+                        <span class="desc">Comédienne, formatrice certifiée PNL et process com</span></p>
+                </div>
+            </div>
+            <div class="item polaroid">
+                <img src="/assets/compagnie/300x300/caroline-sahuquet.jpg" alt="Caroline Sahuquet">
+                <div class="content">
+                    <p><span class="bold">Caroline Sahuquet</span><br>
+                        <span class="desc">Comédienne, autrice, metteuse en scène, professeure de théâtre diplômée d’état</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Notre méthode</h3>
+        <p class="fl">Nous abordons des problématiques tel que la maîtrise de ce que l’on donne à voir, l’écoute de soi
+            et des autres comme outil de communication, le respect de soi, le plaisir, comme mode de vie et comme moyen
+            d’apprentissage, les limites de ce qu’on accepte et de ce que l’on souhaite… Nous mettons les techniques
+            théâtrales au service du développement personnel :</p>
+        <ol>
+            <li><p>Respiration</p></li>
+            <li><p>Techniques vocales</p></li>
+            <li><p>Travail corporel</p></li>
+            <li><p>Concentration</p></li>
+            <li><p>Déploiement de l’imaginaire</p></li>
+            <li><p>Prise de parole en public</p></li>
+            <li><p>Apprivoiser le regard de l’autre</p></li>
+            <li><p>Travail d’improvisation spécifique</p></li>
+        </ol>
+        <p>Nous utilisons les techniques théâtrales mais aussi d’autres méthodes de changements comme la PNL, la Process
+            com.</p>
+
+        <h3>Les ateliers sur mesure</h3>
+        <p class="fl">Nous intervenons au sein d’Entreprises (Total, EDF,…) de Maisons pour l’emploi, des Caf, des
+            associations partenaires mais aussi en milieu scolaire. Nous organisons en amont avec les équipes
+            commanditaires des prestations sur mesure qui répondent à des problématiques spécifiques de terrain ou au
+            développement de pratiques professionnelles adaptées. Nous avons notamment créé une journée de formation
+            intitulée « Rencontres Démasquées » composées d’un spectacle et d’une après-midi de mise en pratique. </p>
+        <p>Nous organisons également des ateliers et des stages de pratiques amateurs pour enfants, adolescents et
+            adultes.</p>
+        <p><span class="bold">En savoir +</span><br>
+            <a href="http://www.bulledartbulledair.com" target="_blank" rel="noopener">le B.A-ba</a></p>
+
+        <h3>Rebondir<br>
+            <span>Action sociale Mairie de Paris</span></h3>
+        <p>La pratique Théâtrale au service de la restauration de l’estime de soi et du développement personnel en 9
+            séances.</p>
+        <p>Dynamiser sa recherche d’emploi et apprendre à mieux communiquer en musclant sa créativité.</p>
+        <ol>
+            <li><p>Trouver ou retrouver le plaisir d’être en groupe et de travailler en équipe.</p></li>
+            <li><p>Optimiser sa prise de parole à partir d’exercices simples et ludiques.</p></li>
+            <li><p>Développer son imaginaire pour mieux se connaître et contribuer ainsi à restaurer l’estime de
+                    soi.</p></li>
+            <li><p>Gérer ses émotions sans les nier.</p></li>
+            <li><p>Améliorer sa communication verbale et non verbale pour reprendre confiance afin de retrouver sa place
+                    légitime dans la société et être mieux armé pour retrouver un emploi et être avec les autres.</p>
+            </li>
+            <li><p>Améliorer profondément l'estime et l’image de soi et s’initier à la pratique de la communication non
+                    violente pour améliorer la qualité des démarches professionnelles en cours et à venir.</p></li>
+            <li><p>Développer au quotidien sa relation aux autres et à soi-même grâce aux techniques de communication
+                    inspirées de la pratique théâtrale.</p></li>
+        </ol>
+        <p>Depuis 2005 l’association organise chaque année plusieurs ateliers de développement personnel pour les
+            publics précaires. La MAIRIE de Paris est notre partenaire privilégié et depuis 2017 nous sommes soutenus
+            dans le cadre de L’Appel à projet REBONDIR.</p>
+        <p>Nous avons, durant ces 13 dernières années, accompagné plus de 40 groupes et plus de 500 participants qui ont
+            tous et toutes vécus une aventure humaine décisive. </p>
+        <p>Dans une ambiance ludique et décontractée, nous mobilisons nos compétences artistiques et pédagogiques afin
+            de donner ou de rendre aux participants force morale, estime de lui-même, volonté et ambition.</p>
+        <p>Nous pouvons nous appuyer sur le partenariat solide avec les référents sociaux des EPI de Paris et des
+            nombreuses associations intermédiaires qui connaissent et soutiennent notre travail. </p>
+
+        <p><span class="bold">En savoir +</span><br>
+            <a href="/assets/transmettre/prog-seances.pdf" download="Le programme des 9 séances">Le programme des 9
+                séances</a><br>
+            <a href="/assets/transmettre/fl.docx" download="Fiche de liaison">Fiche de liaison.docx</a><br>
+            <a href="/assets/transmettre/fl.pdf" download="Fiche de liaison">Fiche de liaison.pdf</a></p>
+        <p>
+            <span class="bold">Contact</span><br>
+            <a href="mailto:caroline.sahuquet@sfr.fr">Caroline Sahuquet</a><br>
+            06 14 32 54 96
+        </p>
+    </section>
+    <section id="apropos">
+        <h2>à propos</h2>
+        <h3>Qui sommes-nous ?</h3>
+        <p class="fl">Mi-fugue Mi-raison est une structure associative qui réalise, produit et diffuse des projets
+            culturels. Elle est créée par deux passionnées de spectacles vivants, Alice Luce, scénariste aujourd’hui
+            présidente de l’association et Caroline Sahuquet, comédienne, autrice, metteuse en scène et directrice
+            artistique de MFMR depuis sa création en 2002. L’association œuvre pour un théâtre d’intérêt général dans
+            toute la France et plus particulièrement à Paris, en Ile-de-France et en Côte d’Armor </p>
+        <p>La direction Artistique de la Compagnie est assurée par Caroline Sahuquet depuis la création. </p>
+        <p>La comptabilité et l’administration sont assurées par Jacques Plaideau, gestionnaire.</p>
+        <p>Mi-fugue Mi-raison développe ses actions engagées au travers de deux axes : la transmission, co-dirigée par
+            Stéphanie Colonna et Caroline Sahuquet et la création de textes, projets et d'actions œuvrant pour un
+            société plus juste et plus équitable grâce une équipe artistique qui se renouvelle et s’enrichit au fil des
+            créations. Depuis 2016 MFMR s'engage encore plus activement dans la lutte pour le droit des femmes. </p>
+
+        <div id="c1">
+            {% for key, member in team %}
+                <div class="item polaroid">
+                    <img src="/assets/compagnie/300x300/{{ key }}" alt="{{ team[key] }}">
+                    <div class="content">
+                        <p><span class="bold">{{ team[key] }}</span></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h3>La petite histoire...</h3>
+        <p class="fl">Le premier objectif d’Alice et Caroline était la création d’un collectif de création, d’entraide
+            et d’échanges entre artistes d’horizons très variés. Entre 2002 et 2007 MFMR a accompagné des court-métrages
+            comme Babel Circus d’Alice Luce et Delphine Deffieux et des expositions de photographes comme Cindy Doutres
+            et Bruno Mercier et des jeunes créations comme Défense D’entrer de Faustine Berardo ou Dans la solitude des
+            champs de coton de B.M Koltès mis en scène par Jean-Phillipe Montefiore. </p>
+        <p>En 2007, le projet Les Chagrins Blancs donne un nouvel essor à la compagnie - Cette pièce co-écrite et
+            interprétée par Stéphanie Colonna, Alexandra Galibert, Barbara Grau et Caroline Sahuquet a été créé au
+            théâtre Mouffetard 2011, à Avignon off 2012 puis une tournée en Bretagne jusqu'en 2015 (avec l’aide de la
+            Mairie de Paris et de Montreuil de Pléneuf-Val-André ainsi que divers Mécénat).</p>
+        <p>Entre 2012 et 2015, MFMR a soutenu la production de deux seuls en scène : Décorum par Aline Stinus (créé à
+            Confluences) et Il s’attendait à enfer un paradis, de et par David Chenaud ainsi qu’une pièce de théâtre Mon
+            frère en Héritage de et mis en scène par Alice Luce ainsi que La Nuit à l'Envers de Xavier Durringer mise en
+            scène par Didier Brengart. </p>
+        <p>De 2016 à 2018, La compagnie produit le Spectacle <a href="http://mfmr.fr/matthieu-x"><span
+                        class="internal_links"> MATTHIEU(X)</span></a> au vingtième théâtre, au Ciné XIII théâtre puis
+            tournée - P'tit Molière du Meilleur spectacle 2016 - L'Adami deviendra depuis cette création notre
+            partenaire privilégié - </p>
+        <p>En 2017 et 2018, MFMR participe à la création de Scènes sur Scène - Rencontres Artistiques Professionnelles
+            en Ile-de-France et y présentera 3 créations - <a href="http://mfmr.fr/matthieu-x"><span
+                        class="internal_links"> MATTHIEU(X)</span></a> - <a href="http://mfmr.fr/speculum"><span
+                        class="internal_links">SPECULUM</span></a> et <a href="http://mfmr.fr/tout-sur-le-rouge"><span
+                        class="internal_links">Tout sur le Rouge.</span></a></p>
+        <p>De 2017 à 2021, MFMR co-produit avec le Troupeau dans le Crâne le Spectacle <a
+                    href="http://mfmr.fr/speculum"><span class="internal_links">SPECULUM</span></a> - de et par Delphine
+            Biard Flore Grimaud et Caroline Sahuquet - Spectacle qui marque un tournant fort de la compagnie puisque
+            plus que jamais nous encrons notre engagement dans la lutte pour le droit des femmes et contre toutes les
+            violences qu'elles subissent - <a href="http://mfmr.fr/speculum"><span
+                        class="internal_links">SPECULUM</span></a> est joué pendant un an et demi à la manufacture des
+            Abbesses puis en tournée et reçoit de nombreux soutiens et distinctions -</p>
+        <p>En 2019, La création de <a href="http://mfmr.fr/tout-sur-le-rouge"><span class="internal_links">Tout sur le Rouge.</span></a>
+            d'Elise Thiebaut par Aline Stinus et Caroline Sahuquet est la continuité du théâtre militant que nous
+            souhaitons fabriquer désormais - <a href="http://mfmr.fr/tout-sur-le-rouge"><span class="internal_links">Tout sur le Rouge.</span></a>
+            sera joué en novembre et décembre 2019 au théâtre de la manufacture des Abbesses, au Théâtre Lepic puis en
+            tournée </p>
+        <p>En 2020, Après de nombreuses secousses liées à la situation sanitaire, MFMR réussi à créer Le <a
+                    href="http://wetoofestival.fr/"><span class="internal_links">WETOO FESTIVAL</span></a> à la cité
+            fertile les 12 et 13 septembre 2020 - Aventure menée par Del Kiloffer, Sephora Haymann , Cecile Martin,
+            Morgane Massart, Aline Stinus, Adrien Castelnau, Flora Guillem et Caroline Sahuquet - avec le soutien des <a
+                    href="https://www.facebook.com/pg/Les-Collectives-2095352147397463/posts"><span
+                        class="internal_links">COLLECTIVES</span></a> ( réseau d'artistes féministes ) </p>
+        <p>EN 2021/ 2022, MFMR commence l'écriture de SPECULUM 2 - Sera en tournée avec <a
+                    href="http://mfmr.fr/speculum"><span class="internal_links">SPECULUM 1</span></a> et <a
+                    href="http://mfmr.fr/tout-sur-le-rouge"><span class="internal_links">Tout sur le Rouge.</span></a> -
+            continue son partenariat avec les plateaux sauvages pour les Ateliers - et prépare les futures éditions du
+            <a href="http://wetoofestival.fr/"><span class="internal_links">WETOO FESTIVAL</span></a></p>
+
+        <h3>Partenaires</h3>
+        <div class="fbox-sa">
+            {% for key, patner in partners %}
+                <div class="item">
+                    <img src="/assets/partenaires/{{ partners[key] }}" alt="{{ partners[key] }}">
+                </div>
+            {% endfor %}
+        </div>
+        <p class="mt center"><span class="bold">MFMR</span> est une compagnie qui fait partie <a class="bold"
+                                                                                                 href="https://www.facebook.com/pg/Les-Collectives-2095352147397463/posts"
+                                                                                                 target="_blank"
+                                                                                                 rel="noopener">Des
+                Collectives</a></p>
+    </section>
+    <!--</div>-->
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.' ~ format ~'.twig' %}
+
+{% block header %}
+<header id="error">
+  <div class="logo">
+    <div class="logo-inner">
+      <h1 class="row">
+        <span class="anim">404</span>
+      </h1>
+
+      <p class="row">
+        <span class="anim">Cette page n'existe pas.</span>
+      </p>
+    </div>
+  </div>
+
+  <span class="discover">
+   <a href="/">
+     <span>&#x21a4;</span> Revenir à l'accueil
+   </a>
+  </span>
+</header>
+{% endblock %}

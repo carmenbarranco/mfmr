@@ -1,0 +1,128 @@
+{% extends 'base.' ~ format ~'.twig' %}
+
+{% block header %}
+<header id="tsr">
+  <div class="logo">
+    <div class="logo-inner">
+      <h1>
+        <span class="row">
+          <span class="anim">Tout</span>
+        </span>
+        <span class="row">
+          <span class="anim">sur le</span>
+        </span>
+        <span class="row">
+          <span class="anim">Rouge</span>
+        </span>
+      </h1>
+
+      <p class="row">
+        <span class="anim">Conception, Dramaturgie, Montage par</span>
+      </p>
+      <p class="row">
+        <span class="anim">Caroline Sahuquet et Aline Stinus.</span>
+      </p>
+      <p class="row">
+        <span class="anim">Interprétée par Aline Stinus.</span>
+      </p>
+      <p class="row">
+        <span class="anim">Texte d'Élise Thiébaut.</span>
+      </p>
+      <p class="row">
+        <span class="anim">Mise en scène par</span>
+      </p>
+      <p class="row">
+        <span class="anim">Caroline Sahuquet.</span>
+      </p>
+    </div>
+  </div>
+
+  <span class="discover">
+    &#x21a7; Découvrir la pièce
+  </span>
+</header>
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+  <h2 id="pt">Synopsis</h2>
+  <p class="mt">Après deux livres écrits par Élise Thiébaut, « CECI EST MON SANG, petite histoire des règles, de celles qui les ont et de ceux qui les font » (Ed. La Découverte) et « Les Règles, quelle aventure ! (Ed. La Ville brûle), Tout sur le Rouge aborde ce tabou qui résiste encore en nous et qui remonte aux origines de l’humanité : les menstruations.</p>
+  <p>Des ménarches à la ménopause, Tout sur le Rouge explore à travers le cycle féminin, les étapes de la vie d’une femme.</p>
+  <p>Bienvenue dans la matrice.</p>
+
+  <h2>Artistes</h2>
+  <div class="mt fbox-sa">
+    <div class="item-c3 polaroid">
+      <img src="/assets/compagnie/300x300/caroline-sahuquet.jpg" alt="Caroline Sahuquet">
+      <div class="content">
+        <p><span class="bold">Caroline Sahuquet</span><br>
+           <span class="desc">Metteuse en scène</span>
+        </p>
+      </div>
+    </div>
+    <div class="item-c3 polaroid">
+      <img src="/assets/compagnie/300x300/elise-thiebaut2.jpg" alt="Élise Thiébaut">
+      <div class="content">
+        <p><span class="bold">Élise Thiébaut</span><br>
+           <span class="desc">Autrice</span>
+        </p>
+      </div>
+    </div>
+    <div class="item-c3 polaroid">
+      <img src="/assets/compagnie/300x300/aline-stinus.jpg" alt="Aline Stinus">
+      <div class="content">
+        <p><span class="bold">Aline Stinus</span><br>
+           <span class="desc">Comédienne</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Actualités</h2>
+  {% if dates.tsr %}
+    <p class="mt bold">Prochaines dates /</p>
+    {% for date in dates.tsr %}
+      <p>{% if date.titre %}{{date.titre}}<br>{% endif %}
+       {{date.lieu}}{% if date.dates %}, {{date.dates}}{% endif %}
+       {% if date.lien %}
+       <br><a  class="bold" href="{{date.lien}}" target="_blank">Réserver</a>
+       {% endif %}
+      </p>
+    {% endfor %}
+  {% else %}
+    <p class="mt bold">Disponible en tournée /</p>
+    <p>Contactez-nous pour programmer le spectacle dans votre salle.</p>
+  {% endif %}
+
+  <p class="mt bold">Contact /</p> 
+  <p>
+    <a href="mailto:alinestinus@gmail.com">Aline Stinus</a><br>
+    06 64 12 66 53<br>
+    <a href="https://www.facebook.com/Spectacle-Tout-sur-le-Rouge-2012792795694868/?eid=ARC-1rN33eiyDeV3RC_jL_EyZfyzux7bj-zlUhq0KR2rjiOXEY6sXWexp-XmqPrEoR9g1DII9no9HPDo" target="_blank">Facebook</a>
+  </p>
+</section>
+
+<section id="presse">
+  <h2>Presse</h2>
+  <p class="mt">
+    <span class="bold">Téléchargements /</span><br>
+    <a href="/assets/creer/tsr/dossier-presse-tsr.pdf" download="Dossier de presse Tout sur le Rouge">Dossier de presse.pdf</a><br>
+    <a href="/assets/creer/tsr/actionMfmrCollegues.pdf" download="Dossier de presse Tout sur le Rouge">Télécharger l'action artistique Collège / Lycée  </a><br>
+  </p>
+
+  <p><span class="bold">Teaser et photographies /</span></p>
+  <div id="c2">
+    {% for key, medium in media %}
+    <div class="item polaroid">
+      {% if medium.type == 'mp4' %}
+      <video controls>
+        <source src="/assets/creer/tsr/{{key}}" type="video/mp4">
+      </video>
+      {% else %}
+      <img src="/assets/creer/tsr/{{key}}" alt="{{key}}">
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
