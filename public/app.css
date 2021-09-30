@@ -880,6 +880,13 @@ section {
 	margin: auto;
 	padding: 1vw;
 }
+.fbox-sa .itemOtherPartner {
+	width: 10vw;
+	min-width: 50px;
+	max-width: 150px;
+	margin: auto;
+	padding: 1vw;
+}
 
 .fbox-sa .item-c3,
 .fbox-sa .item-c4 {
