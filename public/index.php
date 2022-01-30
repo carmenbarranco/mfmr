@@ -46,6 +46,7 @@ $partners = [
     'plateauxSauvages.jpg',
     'ltdlc.jpg',
     'solipam.png',
+    'planningFamilial.png',
 ];
 $supports = [
     'mairie-de-paris.png',
@@ -72,16 +73,59 @@ $media = [];
 $dates = [
     'speculum' => [
         [
-            'titre' => 'Tournée en 2022',
-            'dates' => 'à venir',
+            'titre' => 'Clermont-Ferrand - La Coupole',
+            'lieu' => '12 Bd Pasteur',
+            'dates' => '11 Mars 2022',
+            'lien' => 'http://coupoleevent.com/programme-2/',
             'home' => true
         ],
+        [
+            'titre' => 'Perpignan Palais des rois de Majorque',
+            'lieu' => 'Rue des Archers',
+            'dates' => '18 Mars 2022',
+            'home' => true
+        ],
+        [
+            'titre' => 'Cherbourg - Thêatre des Miroirs',
+            'lieu' => 'Rue Martin Luther King',
+            'dates' => '1er Décembre 2022',
+            'home' => true
+        ],
+        [
+            'titre' => 'Le Grau du Roi - Théâtre Jean-Pierre Cassel',
+            'lieu' => 'Allée Victore Hugo',
+            'dates' => '11 Mars 2023',
+            'home' => true
+        ],
+        [
+            'titre' => 'Mais aussi en 2022',
+            'lieu' => 'Nice, Cachan, Rouen, Paris, Trégor, Saint-Lô...',
+            'home' => true
+        ]
     ],
     'tsr' => [
         [
-            'titre' => 'Collèges - Lycées',
-            'lieu' => 'Paris - Pantin - Seine-Saint-Denis',
-            'dates' => 'à venir en 2022',
+            'titre' => 'Montreuil',
+            'lieu' => 'Collège Solveig Anspach',
+            'dates' => '31 Janvier 2022',
+            'home' => true
+        ],
+        [
+            'titre' => 'Paris 18ème',
+            'lieu' => 'Collège Aimée Césaire',
+            'dates' => '10 Février, 24 Mars, 12 et 19 Mai 2022',
+            'home' => true
+        ],
+        [
+            'titre' => 'Clichy-sous-Bois',
+            'lieu' => 'Collège Romain Rolland, (allée de Gagny)',
+            'dates' => '10 mars 2022',
+            'home' => true
+        ],
+        [
+            'titre' => 'Noisy-le-sec',
+            'lieu' => 'Collège Jacques Prévert',
+            'dates' => '9 Juin 2022',
             'home' => true
         ]
     ],
@@ -89,7 +133,7 @@ $dates = [
         [
             'titre' => 'La 2ème édition du Wetoo Festival a eu lieu à La Cité Fertile',
             'lieu' => '14 Avenue Edouard Vaillant 93500 PANTIN',
-            'dates' => "Rendez-vous pour la 3ème édition en Septembre 2022",
+            'dates' => "Rendez-vous pour la 3ème édition le 9-10-11 Septembre 2022",
             'home' => true,
         ]
     ],
